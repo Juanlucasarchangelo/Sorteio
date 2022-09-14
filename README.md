@@ -1,2 +1,2 @@
-# Sorteio
-Gerenciar número de sorteios e cadastros.
+# sistema
+Sistema para administrar credenciais e informações de clientes
