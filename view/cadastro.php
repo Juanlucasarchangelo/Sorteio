@@ -23,9 +23,10 @@
           <h1 class="text-light">Número da Sorte</h1>
           <p>Faça seu cadastro e concora!</p>
           <br>
+          
           <!-- F o r m u l a r i o -->
 
-          <form id="formCadastro" name="formCadastro" action="../controller/ControllerInfo.php" method="POST">
+          <form id="formCadastro" name="formCadastro" action="../controller/controllerInfo.php" method="POST">
 
             <!-- Nome do cliente-->
 

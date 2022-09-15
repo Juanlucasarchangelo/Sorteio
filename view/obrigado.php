@@ -7,6 +7,17 @@
     <title>Obrigado!</title>
 </head>
 <body>
-    <h1>Obrigado</h1>
+      <!-- Informações do Cliente -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xl-12 col-lg-6 col-sm-12 card bg-light shadow-lg p-3 mb-5 rounded text-center">
+        <?php
+            require_once("../controller/controllerInfo.php");
+            $objNumero = new controllerInfo();
+            $objNumero->getNumero();
+        ?>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

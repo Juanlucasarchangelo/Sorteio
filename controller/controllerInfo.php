@@ -14,6 +14,11 @@ class ControllerInfo
         $this->obj->conexao();
         $this->obj->getInfo();
     }
+    public function getNumero()
+    {
+        $this->obj->conexao();
+        $this->obj->getNumeroSorte();
+    }
 
     public function setInfo($camp1, $camp2, $camp3)
     {

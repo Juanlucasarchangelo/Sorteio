@@ -53,7 +53,7 @@ if(!$_SESSION['usuario']){
             <a class="nav-link" href="painel.php">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cadastroinfo.php">Cadastro</a>
+            <a class="nav-link" href="cadastro.php">Cadastro</a>
           </li>
 
           <!--Mudar Botão Login -->
