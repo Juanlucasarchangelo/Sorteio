@@ -1,9 +1,5 @@
-<?php
-
-session_start();
-
-?>
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html lang="pt-br">
 
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -12,54 +8,42 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="estilo/estilo.css">
-  <link rel="shortcut icon" href="img/cropped-click-2-scaled-1.jpg">
 </head>
 
-<body class="bg-dark">
+<body class="bg-ligth">
 
   <!-- I m a g e m - e - F o r m u l á r i o -->
 
-  <div class="text-center text-white py-5 my-5" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
+  <div class="text-center text-white " style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://image.freepik.com/fotos-gratis/mulher-europeia-atraente-satisfeita-quer-ganhar-levanta-as-maos-com-os-dedos-cruzados-espera-o-resultado-da-loteria-fecha-os-olhos_273609-17580.jpg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: no-repeat, no-repeat; padding-top:15%; padding-bottom:15%;">
 
     <!-- Á r e a - d o - F o r m u l á r i o -->
 
     <div class="container">
       <div class="row">
         <div class="mx-auto col-md-10 p-4">
-          <h1 class="text-light">Cadastro de Clientes</h1>
+          <h1 class="text-light">Número da Sorte</h1>
+          <p>Faça seu cadastro e concora!</p>
           <br>
           <!-- F o r m u l a r i o -->
 
-          <form id="formCadastro" name="formCadastro" action="../controller/controllerInfo.php" method="POST">
+          <form id="formCadastro" name="formCadastro" action="../controller/ControllerInfo.php" method="POST">
 
             <!-- Nome do cliente-->
 
             <div class="form-row">
               <div class="form-group col-md-4">
-                <input required type="text" class="form-control" id="camp1" name="camp1" placeholder="Nome do cliente">
+                <input required type="text" class="form-control" id="camp1" name="camp1" placeholder="Nome">
               </div>
 
               <!-- Empresa -->
 
               <div class="form-group col-md-4">
-                <input required type="text" class="form-control" id="camp2" name="camp2" placeholder="Domínio">
+                <input required type="text" class="form-control" id="camp2" name="camp2" placeholder="Telefone">
               </div>
 
               <!-- Site -->
 
-              <div class="fo rm-group col-md-4"> <input required type="text" class="form-control" id="camp3" name="camp3" placeholder="Data de Inicio do Cliente"> </div>
-            </div>
-
-            <!-- Data de Inicio do job -->
-
-            <div class="form-group">
-              <input required type="text" class="form-control" id="camp4" name="camp4" placeholder="E-mails">
-            </div>
-
-            <!-- E-mail -->
-
-            <div class="form-group">
-              <textarea required class="form-control" id="camp5" name="camp5" rows="4" maxlength="50" placeholder="Endereço Loja Virtual"></textarea>
+              <div class="fo rm-group col-md-4"> <input required type="text" class="form-control" id="camp3" name="camp3" placeholder="E-mail"> </div>
             </div>
 
             <!-- E n v i a r - e - L i m p a r -->

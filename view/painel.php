@@ -69,42 +69,12 @@ if(!$_SESSION['usuario']){
   <!-- Informações do Cliente -->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xl-3 col-lg-5 col-sm-12 bg-warning shadow-lg p-3 mb-5 rounded text-center">
-
-        <?php
-        if($_SESSION['usuario'] == "juan@click.com.br"){
-        echo '<img src="img/juan programador.jpg" alt="foto de perfil do usúario" width="120px" height="120px" class="foto_perfil">
-        <div class="card-body">';
-        } else if($_SESSION['usuario'] == "joao@click.com.br"){
-        echo '<img src="img/joão.png" alt="foto de perfil do usúario" width="120px" height="120px" class="foto_perfil">
-          <div class="card-body">';
-        } else if($_SESSION['usuario'] == "kethi@click.com.br"){
-          echo '<img src="img/Kethi.png" alt="foto de perfil do usúario" width="120px" height="120px" class="foto_perfil">
-            <div class="card-body">';
-        }else if($_SESSION['usuario'] == "poli@click.com.br"){
-          echo '<img src="img/poli.jpg" alt="foto de perfil do usúario" width="120px" height="120px" class="foto_perfil">
-            <div class="card-body">';
-        }else{
-          echo '<img src="img/Agencia-click-logo-condensado-2-p25569trjaax37biytsxs046mq92s5yqimxga0h1hs.png" alt="foto de perfil do usúario" width="120px" height="120px">
-          <div class="card-body">';
-        }
-        ?>
-
-        <h3>Usuário Logado:</h3>
-
-          <h6 class="lead" ><strong><?php echo $_SESSION['usuario']; ?></strong></h6>
-        </div>
-      </div>
-
-      <!-- Area de listagem-->
-
-      <div class="col-xl-9 col-lg-8 col-sm-12 card bg-light shadow-lg p-3 mb-5 rounded">
+      <div class="col-xl-12 col-lg-6 col-sm-12 card bg-light shadow-lg p-3 mb-5 rounded text-center">
         <?php
             require_once("../controller/controllerInfo.php");
             $objControllerFunc = new controllerInfo();
             $objControllerFunc->getTodosFunc();
         ?>
-
       </div>
     </div>
   </div>

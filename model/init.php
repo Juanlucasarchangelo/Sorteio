@@ -1,6 +1,6 @@
 <?php
 
-//timezone
+/*//timezone
 
 date_default_timezone_set('America/Sao_Paulo');
 
@@ -13,9 +13,9 @@ define('BD_USUARIO','clickm67_user');
 //senha de acesso ao BD
 define('BD_SENHA','Click123@mkt');
 //nome do banco de dados
-define('BD_BANCO','clickm67_sistema');
+define('BD_BANCO','clickm67_sistema');*/
 
-/*//timezone
+//timezone
 
 date_default_timezone_set('America/Sao_Paulo');
 
@@ -28,6 +28,6 @@ define('BD_USUARIO','root');
 //senha de acesso ao BD
 define('BD_SENHA','');
 //nome do banco de dados
-define('BD_BANCO','sistema');*/
+define('BD_BANCO','sorteio');
 
 ?>
