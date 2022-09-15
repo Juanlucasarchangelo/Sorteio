@@ -130,12 +130,27 @@ class Dao{
 
   public function insertInfo($camp1, $camp2, $camp3)
   {
-    $stmt = $this->mysql->prepare("INSERT INTO informacoes (camp1, camp2, camp3) VALUES (?,?,?)");
-    $stmt->bind_param("sss", $camp1, $camp2, $camp3);
-    if ($stmt->execute() == TRUE) {
-      header('Location: ../view/obrigado.php');
+    include('conexao.php');
+    $nome = mysqli_real_escape_string($conexao, $_POST['camp1']);
+    $email = mysqli_real_escape_string($conexao, $_POST['camp2']);
+    
+    $query = "select * from informacoes where camp1 = '{$nome}' and camp2 = '{$email}'";
+    
+    $result = mysqli_query($conexao, $query);
+    
+    $row = mysqli_num_rows($result);
+    
+    if($row == 0){
+        $stmt = $this->mysql->prepare("INSERT INTO informacoes (camp1, camp2, camp3) VALUES (?,?,?)");
+        $stmt->bind_param("sss", $camp1, $camp2, $camp3);
+        if ($stmt->execute() == TRUE) {
+          header('Location: ../view/obrigado.php');
+        } else {
+          header('Location: ../view/error.php');
+        }
     } else {
-      header('Location: ../view/error.php');
+        header('Location: ../index.php');
+        $_SESSION['nao_autenticado'] = true;
     }
   }
   public function insertAluno($nome, $sobrenome, $email, $telefone, $cidade, $curso, $curriculo, $senha, $rm, $data_nasc)
