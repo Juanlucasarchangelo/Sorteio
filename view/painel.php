@@ -15,7 +15,7 @@ if(!$_SESSION['usuario']){
 
 <head>
   <meta charset="utf-8">
-  <title>Sistema - Click</title>
+  <title>Sorteio Click</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foΩΩ-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="estilo/estilo.css">
@@ -83,7 +83,7 @@ if(!$_SESSION['usuario']){
 
       <div class="row">
         <div class="col-md-12 text-center">
-          <p class="mb-2">Click Comunicação © 2021 - Todos os direitos reservados</p>
+          <p class="mb-2">Click Comunicação © 2023 - Todos os direitos reservados</p>
         </div>
       </div>
     </div>

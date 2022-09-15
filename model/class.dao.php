@@ -123,9 +123,10 @@ class Dao{
   public function getNumeroSorte()
   {
     include('../controller/conexao.php');
-    $nomeDepois = mysqli_real_escape_string($conexao, $_POST['camp1']);
+    $nomeDepois = $_POST['camp1'];
+    // $nomeDepois = "Juan Lucas Archangelo";
 
-    $query = "select * from informacoes where camp1 = '{$nomeDepois}'";
+    $query = "SELECT * FROM informacoes WHERE camp1 = '{$nomeDepois}'";
     
     $result = mysqli_query($conexao, $query);
     
@@ -229,7 +230,7 @@ class Dao{
           header('Location: ../view/error.php');
         }
     } else {
-        header('Location: ../index.php');
+        header('Location: ../view/cadastro.php?valida=1');
         $_SESSION['nao_autenticado'] = true;
     }
   }

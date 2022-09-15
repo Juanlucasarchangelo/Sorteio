@@ -1,32 +1,60 @@
+<?php
+
+  if(isset($_GET['valida'])){
+    $valida = $_GET['valida'];
+  } else {
+    $valida = 0;
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   
-  <title>Cadastro de Clientes</title>
+  <title>Cadastro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <link rel="stylesheet" href="estilo/estilo.css">
+  <link rel="stylesheet" href="estilo/style.css">
+  <link rel="shortcut icon" href="img/cropped-click-2-scaled-1.jpg">
 </head>
 
 <body class="bg-ligth">
 
+<?php
+
+if($valida == 1):
+
+?>
+
+<div class="notification">
+  <p>ERRO: Você ja realizou o cadastro. Limite de um cadastro por pessoa!</p>
+</div>
+
+<?php
+
+endif;
+
+?>
+
   <!-- I m a g e m - e - F o r m u l á r i o -->
 
-  <div class="text-center text-white " style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://image.freepik.com/fotos-gratis/mulher-europeia-atraente-satisfeita-quer-ganhar-levanta-as-maos-com-os-dedos-cruzados-espera-o-resultado-da-loteria-fecha-os-olhos_273609-17580.jpg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: no-repeat, no-repeat; padding-top:15%; padding-bottom:15%;">
+  <div class="text-center text-white " style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://clickcomunica.com.br/wp-content/uploads/2022/09/WhatsApp-Image-2022-09-15-at-11.12.03.jpeg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: no-repeat, no-repeat; padding-top:15%; padding-bottom:15%;">
 
     <!-- Á r e a - d o - F o r m u l á r i o -->
 
     <div class="container">
       <div class="row">
         <div class="mx-auto col-md-10 p-4">
-          <h1 class="text-light">Número da Sorte</h1>
-          <p>Faça seu cadastro e concora!</p>
+          <h1 class="text-light">Sorteio Mês do Cliente</h1>
+          <p>Cadastre-se e concorra a um sorteio de 1 kit com 1 camiseta do Brasil personalizada, 1 mini betoneira, 1 caneta e 1 cachaça.</p>
           <br>
-          
+
           <!-- F o r m u l a r i o -->
 
-          <form id="formCadastro" name="formCadastro" action="../controller/controllerInfo.php" method="POST">
+          <form id="formCadastro" name="formCadastro" action="../controller/controllerinfo.php" method="POST">
 
             <!-- Nome do cliente-->
 
@@ -48,12 +76,15 @@
 
             <!-- E n v i a r - e - L i m p a r -->
 
-            <button type="reset" class="btn btn-danger mx-3">Limpar</button>
-            <button type="submit" class="btn btn-primary mx-3">Cadastrar</button>
+            <button type="submit" class="btn btn-primary mx-3" style="margin-top: 5px; margin-bottom: 5px;">Quero participar</button>
 
             <input type="hidden" id="_incluir" name="_incluir" value="_incluir">
 
           </form>
+          <h3 class="text-light" style="padding-top: 50px; padding-bottom: 30px;">Informações importantes</h3>
+          <p>Clique no botão acima para se cadastrar e concorrer ao sorteio.</p>
+          <p>Sorteio válido para cadastros realizados entre os dias <strong>15/09/2022 e 30/09/2022</strong></p>
+          <p>Entraremos em contato com o(a) vencedor(a) pelo whatsapp.</p>
         </div>
       </div>
     </div>
