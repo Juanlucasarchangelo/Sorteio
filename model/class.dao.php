@@ -44,7 +44,7 @@ class Dao{
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-info" data-dismiss="modal">Fechar</button>
-                <a href="../controller/ControllerInfo.php?id_camp=' . $row['id_camp'] . '" class="btn btn-danger font-weight-bold">APAGAR</a>
+                <a href="../controller/controllerinfo.php?id_camp=' . $row['id_camp'] . '" class="btn btn-danger font-weight-bold">APAGAR</a>
               </div>
 
             </div>
